@@ -1,0 +1,14 @@
+export const authConstants = {
+    LOGIN_USER:"DOCTORS/LOGIN_USER",
+    REGISTER_USER:"DOCTORS/REGISTER_USER",
+    CONFIRMCODE:"DOCTORS/CONFIRM_CODE",
+    RESENDCODE:"DOCTORS/RESENDCODE",
+    SENDEMAIL:"DOCTORS/EMAIL",
+    FORGOTPASSWORDOTP:"DOCTORS/FORGOTPASSWORDOTP",
+    UPDATEPASSWORD:"DOCTORS/UPDATEPASSWORD"
+}
+
+export const onLoginResults = {
+    onLoginFail:"Invalid Credentials",
+    onCodeFail:"Invalid Code "
+}
