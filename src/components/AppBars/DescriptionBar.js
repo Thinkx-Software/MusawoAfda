@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Appbar, Menu, Provider } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { View, Text } from "react-native";
 import { theme } from '../../theme';
 import { logOut } from '../../redux/slices/authSlice/authSlice';
 

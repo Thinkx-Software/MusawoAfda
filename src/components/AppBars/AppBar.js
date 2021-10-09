@@ -1,10 +1,10 @@
 import React from "react";
-import { Appbar, Badge } from 'react-native-paper';
+import { Appbar } from 'react-native-paper';
 import { theme } from "../../theme";
-import { View, StyleSheet, Pressable } from "react-native";
+import {  StyleSheet, Pressable } from "react-native";
 import AvatarComponent from "../ReusableComponents/Avatar";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
 const AppBar = ({ navigation, previous, title, elevate, subTitle }) => {

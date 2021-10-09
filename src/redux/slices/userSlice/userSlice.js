@@ -88,7 +88,7 @@ const userSlice = createSlice({
         clearRequestedLabService: (state) => {
             state.normaluser.requestedService = null;
         },
-        setRequestedLabService:(state,{payload})=>{
+        setRequestedLabService: (state, { payload }) => {
             state.normaluser.requestedService = payload?.request;
         },
     },
@@ -202,7 +202,7 @@ const userSlice = createSlice({
             state.normaluser.completeRequestError = null;
         },
         [clientCompleteRequest.fulfilled]: (state, { payload }) => {
-            console.log(`The rated payload is ${JSON.stringify(payload)}`);
+            //console.log(`The rated payload is ${JSON.stringify(payload)}`);
 
             //state.normaluser.completeRequestError = payload.message
 
@@ -221,29 +221,35 @@ const userSlice = createSlice({
             state.normaluser.labServices = payload;
         },
         [getAllLabServives.rejected]: (state, { payload }) => {
-            console.log('There is an error');
+            //console.log('There is an error');
         },
         //labservices
 
         //requestedServie
         [requestLabatoryService.pending]: (state) => {
+            //alert('pending')
             state.normaluser.requestedService = null;
         },
         [requestLabatoryService.fulfilled]: (state, { payload }) => {
+            //alert('fulfilled')
             //alert(`The request service is ${JSON.stringify(payload)}`);
             state.normaluser.requestedService = payload?.request;
-            alert(`The request service is ${JSON.stringify(state.normaluser.requestedService)}`)
+            //alert(`The request service is ${JSON.stringify(state.normaluser.requestedService)}`)
 
         },
-        //getrequested lab service
-        [getRequestLabService.pending]:(state)=>{
-            
+        [requestLabatoryService.rejected]: (state, { payload }) => {
+            //alert('rejected')
         },
-        [getRequestLabService.fulfilled]:(state,{payload})=>{
+        //requested lab service
+        //getrequested lab service
+        [getRequestLabService.pending]: (state) => {
+
+        },
+        [getRequestLabService.fulfilled]: (state, { payload }) => {
             state.normaluser.requestedService = payload?.request;
         },
-        [getRequestLabService.rejected]:(state,{payload})=>{
-            console.log('reejected')
+        [getRequestLabService.rejected]: (state, { payload }) => {
+            //console.log('reejected')
         },
 
         [requestLabatoryService.rejected]: (state, { payload }) => { },
@@ -255,7 +261,7 @@ const userSlice = createSlice({
             state.normaluser.requestLabService = null;
         },
         [cancelLabRequest.rejected]: (state, { payload }) => {
-            console.log('There is an error');
+            // console.log('There is an error');
         },
         //cancelrequest
         //ongoinglabrequest
@@ -280,7 +286,7 @@ const userSlice = createSlice({
                 //do nothing
             } else {
                 const doctor = payload?.doctor[0];
-                console.log(`The current doctor is ${JSON.stringify(doctor)}`);
+                //console.log(`The current doctor is ${JSON.stringify(doctor)}`);
                 //console.log(`The doctor ${JSON.stringify(doctor)}`)
                 const request = payload?.request[0];
                 state.normaluser.tempHoldDoctorInfo = doctor;

@@ -69,15 +69,15 @@ const LabRequest = () => {
                                 {
                                     requestedService?.status != 'pending' && (
                                         <ButtonComponent mode="outlined" text="Rate " color={`${theme.colors.primary}`} style={{
-                                            marginTop: 5,
+                                            marginTop: 2,
                                             borderRadius: 10,
                                             borderWidth: 2,
                                             borderColor: theme.colors.primary,
-                                            height: 35
+                                            height: 40
 
                                         }}
                                             contentStyle={{
-                                                fontSize: 8, height: 28
+                                                fontSize: 8, height: 35
                                             }}
                                             onPress={() => onMakeCall()}
                                         />
@@ -127,11 +127,11 @@ const LabRequest = () => {
                                             borderRadius: 10,
                                             borderWidth: 2,
                                             borderColor: theme.colors.error,
-                                            height: 35
+                                            height: 40
 
                                         }}
                                             contentStyle={{
-                                                fontSize: 8, height: 28
+                                                fontSize: 8, height: 35
                                             }}
                                             // onPress={() => onMakeCall()}
                                             onPress={onCancelRequest}

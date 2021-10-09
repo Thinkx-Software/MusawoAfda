@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { StyleSheet, Text, View, KeyboardAvoidingView, Platform } from 'react-native'
+import { StyleSheet, View, KeyboardAvoidingView, Platform } from 'react-native'
 import { useSelector } from 'react-redux';
 import { GOOGLE_MAPS_APIKEY } from '@env';
 import { TextInput, HelperText, Subheading } from "react-native-paper"
@@ -8,7 +8,7 @@ import { theme } from '../../theme';
 import Loading from '../../components/Indicator/Loading';
 import { EmptyFieldError, numberError } from '../../helpers';
 import ButtonComponent from '../../components/Button/Button';
-import { getRequestLabService, requestLabatoryService, } from '../../redux/slices/userSlice/actions';
+import { getRequestLabService } from '../../redux/slices/userSlice/actions';
 import { useDispatch } from "react-redux"
 import { useIsFocused, useNavigation } from '@react-navigation/core';
 import { autoComplteStyles } from '../../constants/autocompletestyles';
@@ -27,6 +27,7 @@ const MakeLabRequest = ({ route }) => {
             navigation.navigate('LabRequest')
         }
     }, [requestedService])
+    
     //check service
     useEffect(() => {
         if (requestedService != null) {
