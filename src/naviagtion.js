@@ -55,7 +55,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props} logout
               title={`Profile`}
               back={true}
-              titleStyle={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50, alignSelf: "center" }}
+              previous
+              titleStyle={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50,  }}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -69,7 +70,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`${route?.params?.service?.name}`}
               back={true}
-              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50, alignSelf: "center" }}
+              previous
+              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50, }}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -83,7 +85,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`Nearest HealthWorker`}
               back={true}
-              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50, alignSelf: "center" }}
+              previous
+              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50,}}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -97,7 +100,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`Update Location`}
               back={true}
-              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50, alignSelf: "center" }}
+              previous
+              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50 }}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -111,7 +115,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`Ratings and Review`}
               back={true}
-              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50, alignSelf: "center" }}
+              previous
+              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50}}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -125,7 +130,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`Laboratory Servives`}
               back={true}
-              titleStyle={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50, alignSelf: "center" }}
+              previous
+              titleStyle={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50 }}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -139,7 +145,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`Laboratory Request`}
               back={true}
-              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50 ,alignSelf: "center" }}
+              previous
+              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50  }}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -153,7 +160,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`${route?.params?.name}`}
               back={true}
-              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50,alignSelf: "center"  }}
+              previous
+              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50  }}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}
@@ -167,7 +175,8 @@ const Navigation = () => {
             header: (props) => <DescriptionBar {...props}
               title={`Ratings and Review`}
               back={true}
-              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50,alignSelf: "center"  }}
+              previous
+              titleStyle={{ fontSize: 18, fontWeight: 'bold', color: theme.colors.primary, marginRight: 50 }}
               headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
             />
           })}

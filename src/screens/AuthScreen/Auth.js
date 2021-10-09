@@ -37,6 +37,7 @@ const Auth = () => {
           header: (props) => <AuthBar {...props}
             title={`Confirm Username`}
             back={true}
+            previous
             titleStyle={{ fontSize: 20, fontWeight: 'bold', color: theme.colors.primary, alignSelf: "center", }}
             headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
           />
@@ -51,6 +52,7 @@ const Auth = () => {
         options={({ route }) => ({
           header: (props) => <AuthBar {...props}
             title={`Resend Otp`}
+            previous
             back={true}
             titleStyle={{ fontSize: 20, fontWeight: 'bold', color: theme.colors.primary, }}
             headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
@@ -65,9 +67,11 @@ const Auth = () => {
         component={Register}
         options={({ route }) => ({
           header: (props) => <AuthBar {...props}
+            previous
             title="Register"
             back={true}
-            titleStyle={{ fontSize: 28, fontWeight: 'bold', color: theme.colors.primary, alignSelf: "center" }}
+            previous
+            titleStyle={{ fontSize: 28, fontWeight: 'bold', color: theme.colors.primary }}
             headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
           />
         })}
@@ -80,6 +84,7 @@ const Auth = () => {
           header: (props) => <AuthBar {...props}
             title={`Forgot Password`}
             back={true}
+            previous
             titleStyle={{ fontSize: 28, fontWeight: 'bold', color: theme.colors.primary }}
             headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
           />
@@ -95,6 +100,7 @@ const Auth = () => {
           header: (props) => <AuthBar {...props}
             title={`Enter OTP`}
             back={true}
+            previous
             titleStyle={{ fontSize: 28, fontWeight: 'bold', color: theme.colors.primary }}
             headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
           />
@@ -109,6 +115,7 @@ const Auth = () => {
         options={({ route }) => ({
           header: (props) => <AuthBar {...props}
             title={`Reset Password`}
+            previous
             back={true}
             titleStyle={{ fontSize: 28, fontWeight: 'bold', color: theme.colors.primary }}
             headerStyles={{ backgroundColor: theme.colors.text, elevation: 0 }}
