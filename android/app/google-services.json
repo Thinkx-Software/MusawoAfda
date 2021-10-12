@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "38080280779",
+    "project_id": "thinkxcloud",
+    "storage_bucket": "thinkxcloud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38080280779:android:5ec4c89a0c31de6af4034e",
+        "android_client_info": {
+          "package_name": "com.musawoadfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "38080280779-3g8r88nc2ja3bg8akmo54llr015586vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA9DgljfNMn7bXEanSq6ZsgrlsfaicK1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "38080280779-3g8r88nc2ja3bg8akmo54llr015586vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

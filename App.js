@@ -9,7 +9,7 @@ import NetInfo from '@react-native-community/netinfo';
 import { constantstyles } from './src/constants/constanstStyles';
 import { theme } from './src/theme';
 import ButtonComponent from './src/components/Button/Button';
-import { Provider as PaperProvider } from 'react-native-paper';
+import SplashScreen from 'react-native-splash-screen'
 
 
 let persistor = persistStore(store)
@@ -34,6 +34,7 @@ export default function App() {
   //check net
   useEffect(() => {
     checkInternet()
+    SplashScreen.hide();
   }, [])
   useEffect(() => {
 

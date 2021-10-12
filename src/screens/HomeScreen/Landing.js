@@ -18,8 +18,17 @@ import {
     onGoingLabRequest
 } from '../../redux/slices/userSlice/actions';
 import { FAB } from 'react-native-elements';
+import { requestUserPermission } from '../../urls/notificationService';
+import messaging from '@react-native-firebase/messaging';
+import { Alert } from 'react-native';
+import ButtonComponent from '../../components/Button/Button';
+import { sendNotification } from '../../urls/sendNofication';
+
 
 const Landing = () => {
+
+
+
     //get user
     const {
         user: { isNormalUser, isHealthWorker, userInfo },
@@ -50,7 +59,43 @@ const Landing = () => {
             dispatch(clientCurrentRequest(userInfo?.id));
             //client request
         }
+        //request user permission
+        requestUserPermission()
+        //request user permission
+        //send notification
+
     }, []);
+
+    useEffect(() => {
+        messaging().onNotificationOpenedApp(remoteMessage => {
+            console.log(
+                'Notification caused app to open from background state:',
+                remoteMessage.notification,
+            );
+            //navigation.navigate(remoteMessage.data.type);
+            navigation.navigate('Home')
+        });
+
+        // Check whether an initial notification is available
+        messaging()
+            .getInitialNotification()
+            .then(remoteMessage => {
+                if (remoteMessage) {
+                    console.log(
+                        'Notification caused app to open from quit state:',
+                        remoteMessage.notification,
+                    );
+                    //setInitialRoute(remoteMessage.data.type); // e.g. "Settings"
+                }
+
+            });
+
+        const unsubscribe = messaging().onMessage(async remoteMessage => {
+            Alert.alert(JSON.stringify(remoteMessage.notification.body));
+        });
+
+        return unsubscribe;
+    }, [])
     //dispatch history
 
     useEffect(() => {
@@ -77,6 +122,10 @@ const Landing = () => {
         navigation.navigate('LabRequest')
     }
     //show request
+
+    const sending = () => {
+        sendNotification()
+    }
     return (
         <View
             style={[
@@ -134,6 +183,21 @@ const Landing = () => {
 
 
                         <HomeFlatList />
+                        {/* fake button*/}
+                        <ButtonComponent mode="outlined" text="send" color={`${theme.colors.primary}`}
+                            style={{
+                                marginTop: 5,
+                                borderRadius: 20,
+                                borderWidth: 1,
+                                borderColor: theme.colors.disabled,
+
+                            }}
+                            contentStyle={{
+                                fontSize: 8, height: 28
+                            }}
+                            onPress={sending}
+                        />
+                        {/*fake button */}
                     </View>
                 ) : (
                     <View>
