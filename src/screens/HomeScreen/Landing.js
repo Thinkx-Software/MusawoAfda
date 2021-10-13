@@ -22,7 +22,8 @@ import { requestUserPermission } from '../../urls/notificationService';
 import messaging from '@react-native-firebase/messaging';
 import { Alert } from 'react-native';
 import ButtonComponent from '../../components/Button/Button';
-import { sendNotification } from '../../urls/sendNofication';
+import sendPushMsg from '../../services/sendNotification';
+
 
 
 const Landing = () => {
@@ -123,9 +124,7 @@ const Landing = () => {
     }
     //show request
 
-    const sending = () => {
-        sendNotification()
-    }
+
     return (
         <View
             style={[
@@ -195,7 +194,7 @@ const Landing = () => {
                             contentStyle={{
                                 fontSize: 8, height: 28
                             }}
-                            onPress={sending}
+                            onPress={() => sendPushMsg()}
                         />
                         {/*fake button */}
                     </View>

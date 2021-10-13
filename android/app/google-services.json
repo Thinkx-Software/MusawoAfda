@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "38080280779",
-    "project_id": "thinkxcloud",
-    "storage_bucket": "thinkxcloud.appspot.com"
+    "project_number": "448207897504",
+    "project_id": "musawoadfa",
+    "storage_bucket": "musawoadfa.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:38080280779:android:5ec4c89a0c31de6af4034e",
+        "mobilesdk_app_id": "1:448207897504:android:d63f5d54c1f7e5081c5ac5",
         "android_client_info": {
           "package_name": "com.musawoadfa"
         }
       },
       "oauth_client": [
         {
-          "client_id": "38080280779-3g8r88nc2ja3bg8akmo54llr015586vd.apps.googleusercontent.com",
+          "client_id": "448207897504-b7i4l3rronet3shm8hvhb90knmniiml3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDA9DgljfNMn7bXEanSq6ZsgrlsfaicK1E"
+          "current_key": "AIzaSyDo0DvETQZ-hsfpm6IaMW9H8YJ0kf8-7rc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "38080280779-3g8r88nc2ja3bg8akmo54llr015586vd.apps.googleusercontent.com",
+              "client_id": "448207897504-b7i4l3rronet3shm8hvhb90knmniiml3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
